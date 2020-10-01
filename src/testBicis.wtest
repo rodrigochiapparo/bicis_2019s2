@@ -1,0 +1,15 @@
+import bicis.*
+test "testBicis" {
+
+	const bici1 = new Bicicleta()
+	bici1.rodado(10)
+	bici1.centimetros(100)
+	bici1.marca("mountain")
+	bici1.agregarAcc(morral)
+	bici1.agregarAcc(farolito)
+	
+	assert.equals(12, bici1.velocidadCrucero())
+	assert.that(bici1.tieneLuz())
+	assert.equals(1,bici1.accesoriosLivianos())
+
+}

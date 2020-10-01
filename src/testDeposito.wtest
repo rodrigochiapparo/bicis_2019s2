@@ -1,0 +1,28 @@
+import deposito.*
+import bicis.*
+
+test "depositoTest" {
+
+    const depo1 = new Depositos()
+    const bici1 = new Bicicleta()
+    bici1.rodado(10)
+    bici1.centimetros(100)
+    bici1.marca("mountain")
+    bici1.agregarAcc(morral)
+    bici1.agregarAcc(farolito)
+    const bici2 = new Bicicleta()
+    bici2.rodado(15)
+    bici2.centimetros(120)
+    bici2.marca("bike")
+    depo1.agregarBici(bici1)
+    depo1.agregarBici(bici2)
+    morral.largo(100)
+    
+    
+    assert.that(not depo1.esNocturno())
+    assert.that(depo1.tieneBiciParaLlevarCarga(5))
+    assert.equals(0,depo1.cargaTotalBiciLarga())
+    assert.equals(1,depo1.bicisSinAccesorios())
+    
+
+}
